@@ -47,6 +47,8 @@ class _HomePageState extends State<HomePage> {
                         color: Colors.blue[600],
                       ),
                     ),
+                  ),SizedBox(
+                    height: 30,
                   ),
                   if (textScanning) const CircularProgressIndicator(),
                   if (!textScanning && imageFile == null)
@@ -73,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                     height: 40,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -118,8 +120,11 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         onPressed: () {
+                          // delete the picture and translated data
                           imageFile = null;
                           scannedText = "";
+                          setState(() {});
+
                         },
                         child: Icon(
                           Icons.delete,

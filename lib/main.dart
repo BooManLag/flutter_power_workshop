@@ -20,7 +20,7 @@ class App extends StatelessWidget {
       title: 'Introduction screen',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const OnBoardingPage(),
+      home: const HomePage(),
     );
   }
 }
